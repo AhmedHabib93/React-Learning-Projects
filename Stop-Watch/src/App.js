@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <div className="py-8 max-w-48 flex flex-col justify-center items-center mx-auto">
-      <h2 className="font-bold text-red-500">Stop - Watch</h2>
+      <h1 className="font-bold text-red-500">Stop - Watch</h1>
       <div className="py-2 px-4 bg-blue-500 w-full text-center  text-white m-4 rounded-lg space-x-1">
         <span>{("0" + (Math.floor(time / 60000) % 60)).slice(-2)} :</span>
         <span>{("0" + (Math.floor(time / 1000) % 60)).slice(-2)} :</span>
@@ -35,14 +35,14 @@ export default function App() {
       <div className="flex gap-8 justify-between w-full">
         {isStart ? (
           <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded"
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded"
             onClick={handleClick}
           >
             Stop
           </button>
         ) : (
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
             onClick={handleClick}
           >
             Start
@@ -50,7 +50,7 @@ export default function App() {
         )}
 
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
           onClick={handleReset}
         >
           Reset
