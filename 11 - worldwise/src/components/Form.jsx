@@ -21,6 +21,13 @@ export function convertToEmoji(countryCode) {
   return String.fromCodePoint(...codePoints);
 }
 
+const popperModifiers = [
+  {
+    name: "arrow",
+    options: { padding: 24 },
+  },
+];
+
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 function Form() {
@@ -47,7 +54,6 @@ function Form() {
             `${BASE_URL}?latitude=${lat}&longitude=${lng}`
           );
           const data = await res.json();
-
           if (!data.countryCode)
             throw new Error(
               "That doesn't seem to be a city. Click somewhrer else 😉"
@@ -115,6 +121,7 @@ function Form() {
           onChange={(date) => setDate(date)}
           selected={date}
           dateFormat="dd/MM/yyyy"
+          popperModifiers={popperModifiers}
         />
       </div>
 
