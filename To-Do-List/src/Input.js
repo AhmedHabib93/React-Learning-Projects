@@ -15,13 +15,14 @@ function Input({ todo, setTodo }) {
       <form className="flex gap-4" onSubmit={handleAddItem}>
         <input
           autoFocus
+          required
           type="text"
-          className="px-4 py-2 border-2 rounded-lg outline-none"
-          placeholder="what're you going to do?"
+          className="px-3 py-1 border-2 rounded-lg outline-none"
+          placeholder="what're you going to do ?"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         ></input>
-        <button className="px-6  bg-red-500 hover:bg-red-600 text-gray-100 font-bold rounded ">
+        <button className="px-3 bg-red-500 hover:bg-red-600 text-gray-100 text-sm font-bold rounded-lg ">
           Add
         </button>
       </form>
