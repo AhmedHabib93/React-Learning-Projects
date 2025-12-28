@@ -68,9 +68,9 @@ function CreateOrder() {
           </div>
         </div>
 
-        <div className="relative mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
+        <div className="relative mb-5 flex gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Address</label>
-          <div className="grow">
+          <div className="flex grow flex-col">
             <input
               className="input w-full"
               type="text"

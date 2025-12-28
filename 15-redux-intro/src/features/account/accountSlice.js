@@ -15,8 +15,11 @@ const accountSlice = createSlice({
       state.balance += action.payload;
       state.isLoading = false;
     },
-    withdraw(state, action) {
-      state.balance -= action.payload;
+    // withdraw(state, action) {
+    //   state.balance -= action.payload;
+    // },
+    withdraw: (state , action) => {
+      state.balance -= action.payload
     },
     requestLoan: {
       prepare(amount, purpose) {
@@ -33,6 +36,7 @@ const accountSlice = createSlice({
       },
     },
     payLoan(state) {
+      if(state.balance < state.loan) return alert("You don't have enough balance");
       state.balance -= state.loan;
       state.loan = 0;
       state.loanPurpose = "";
@@ -46,7 +50,8 @@ const accountSlice = createSlice({
 export const { withdraw, requestLoan, payLoan } = accountSlice.actions;
 
 export function deposit(amount, currency) {
-  if (currency === "USD") return { type: "account/deposit", payload: amount };
+  // if (currency === "USD") return { type: "account/deposit", payload: amount };
+  if (currency === "USD") return Promise.resolve(accountSlice.actions.deposit(amount));
   return async function (dispatch, getState) {
     dispatch({ type: "account/convertingCurrency" });
     //API call
