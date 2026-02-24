@@ -25,6 +25,7 @@
     "eslint": "^9.26.0",
     "eslint-config-react-app": "^7.0.1",
     "vite": "^7.3.0",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint": "^1.8.1",
+    "minimatch": ">=10.2.1"
   }
 }
