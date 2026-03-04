@@ -24,7 +24,7 @@
     "@vitejs/plugin-react": "^5.1.2",
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
-    "minimatch": "^10.2.1",
+    "minimatch": "^10.2.4",
     "vite": "^7.3.0",
     "vite-plugin-eslint": "^1.8.1"
   }
