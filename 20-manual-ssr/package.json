@@ -1,22 +1,37 @@
 {
-  "name": "20-manual-ssr",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.4",
-    "@babel/preset-react": "^7.24.7",
-    "@babel/register": "^7.24.6"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+    "name":  "20-manual-ssr",
+    "version":  "1.0.0",
+    "main":  "server.js",
+    "scripts":  {
+                    "test":  "echo \"Error: no test specified\" \u0026\u0026 exit 1",
+                    "start":  "node server.js"
+                },
+    "author":  "",
+    "license":  "ISC",
+    "description":  "",
+    "devDependencies":  {
+                            "@babel/core":  "^7.25.2",
+                            "@babel/preset-env":  "^7.25.4",
+                            "@babel/preset-react":  "^7.24.7",
+                            "@babel/register":  "^7.24.6"
+                        },
+    "dependencies":  {
+                         "react":  "^18.3.1",
+                         "react-dom":  "^18.3.1"
+                     },
+    "overrides":  {
+                      "braces":  "^3.0.3",
+                      "underscore":  "^1.13.8",
+                      "nth-check":  "^2.0.1",
+                      "@tootallnate/once":  "^3.0.1",
+                      "serialize-javascript":  "^7.0.5",
+                      "micromatch":  "^4.0.8",
+                      "postcss":  "^8.4.31",
+                      "picomatch":  "^4.0.4",
+                      "webpack-dev-server":  "^5.2.1",
+                      "glob":  "^10.5.0",
+                      "yaml":  "^2.8.3",
+                      "brace-expansion":  "^2.0.3",
+                      "ws":  "^7.5.10"
+                  }
 }
